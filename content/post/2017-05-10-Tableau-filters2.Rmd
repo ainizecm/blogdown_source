@@ -1,0 +1,62 @@
+---
+title: "Avoiding or Hiding Tableau filters - Part II"
+author: "Ainize Cidoncha"
+date: 2017-05-03T21:13:14-05:00
+categories: ["Tableau"]
+tags: ["Tableau", "filters", "icons","visual"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+Following from the previous post on [**"Avoiding or Hiding Tableau filters - Part I"**](https://ainizecm.github.io/blog/2017/05/03/avoiding-or-hiding-tableau-filters---part-i/),
+let's get down to the nitty gritty how tos!
+
+We start with a graph and a filter, simple.
+
+The following graph shows the percentage of people per state that agree with each of the statements. Each state is a bar, the more on the right the bar is the bigger percentage of the population in that specific state agrees with that sentence.
+
+<img src="Filter State.png" width="500">
+
+First, we will create a new sheet listing of the options in the filter, step by step.
+
+1. Bring the Dimension you want to show to rows.
+
+2. On the Marks box choose the Polygon option.
+
+3. Format the sheets setting the borders to None.
+
+<img src="filters1.png" width="500">
+
+4. Format the Text as you wish. I like centering and making it grey and bold but that is a personal preference.
+
+5. Add it to the Dashboard and click on the top right of the sheet, where you can see a filter icon.
+<img src="useasfilter.png" width="500">
+
+So far you will be able to use the sheet as a filter for your other graph by clicking any of the names.
+
+Do you want to still make it a bit nicer and use icons instead or words?
+
+Let's see how we can do that.
+
+6. Find the icons you want to use and save then on My Tableau Repository/Shapes.(In this case I googled USA states flag icons and download them.)
+
+<img src="tableau repository.png" width="300">
+
+7. Open the sheet again and change the Marks type to Shape.
+
+8. Drag the Dimension into the Shape box.
+
+9. Click on the Shape box and assign a shape to each name. (Note: If you can not see the shapes you have just added try clicking on Reload Shapes.)
+
+<img src="Set shapes.png" width="300">
+
+10. Dis-select "Show Header" from the dimension on rows.
+<img src="show header.png" width="300">
+
+We are all done, you can now click on the icon in order to filter your view!
+
+<img src="Filter with icon.png" width="500">
+
+

@@ -1,0 +1,49 @@
+---
+title: "Hello World"
+author: "Ainize Cidoncha"
+date: 2017-05-02T21:13:14-05:00
+categories: ["R"]
+tags: ["Hello", "analytics","about"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+Hello world!
+
+I am Ainize, Commercial Analyst in Global during the day and Consultant for ISGlobal at night. I am passionate about analytics, decision making, data, frameworks and having an impact through numbers. And that is what I will be writing about. 
+
+
+
+Bilbao, Utrecht, Barcelona, Chicago and London are how I would describe my career so far. Each city has given me something different and special, not only at a professional level. I started my Mathematics Degree in Bilbao and finish it at Utrecht University. 
+
+I moved to Barcelona for the Masters in Advanced Mathematics and Mathematical Engineering, where I started my professional career working for Bayer Healthcare. 
+
+I was given the great opportunity to develop my master thesis at the Illinois Institute of Technology in Chicago so I jumped across the ocean for the first time and started what it would be an unexpected incredibly amazing project. I partnered with the Institute for Global Health in Barcelona and we developed a new strategical multi criteria decision model that can help decision makers evaluating their options and building data driven strategies.
+
+It has been a year now since I am in London working as a Commercial Analyst for Global. Since January I am also supporting ISGlobal implementing the model we developed in different countries.
+
+
+
+This blog is aim to be a different way of expressing myself and being able to store and share at the same time tips, tricks, frameworks, models... that I find useful on my day to day. I would like to be able to document my discoveries and progress in a way that might be useful for someone else. 
+
+
+
+Currently, I use Tableau, Alteryx, SQL and R on a daily basis, and every day I need to find out a new way of doing things or use a new tip I did not know before. Moreover, there are some ideas I would like to write about, frameworks and models that can help structure problems or start a discussion. Basically anything that has to do with Analytics and INspirational Ideas.
+
+
+
+If you end up here and you find something useful, if you believe there is something else I can share with you, if you know a better or faster way of doing things, if you know about blogs that can help me, if you want to give your feedback or just make a comment, please do so. 
+
+Happy Blogging :)
+
+Ainize
+
+
+
+
+
+
+
+

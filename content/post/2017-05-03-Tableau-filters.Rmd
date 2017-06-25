@@ -1,0 +1,52 @@
+---
+title: "Avoiding or Hiding Tableau filters - Part I"
+author: "Ainize Cidoncha"
+date: 2017-05-03T21:13:14-05:00
+categories: ["Tableau"]
+tags: ["Tableau", "filters"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+When it comes to Tableau Dashboards, I am known as a filter-hater within my team. I find them ugly and not very user friendly. That's why I always try to find new ways to avoid, hide or just make filters more user-friendly.
+
+
+It usually helps me going through the following process:
+
+1. Built a Dashboard that is able to show the needed level of detail (use all the filters you need)
+2. See if some coloring/shaping can help
+3. If filtering is needed, can you incorporate it nicely in the view?
+5. Do not be afraid of using more than one view. If more detail is needed you can cover it on a more specific view.
+
+
+
+Here are some of the options I have used so far to make my views less full of filters and more user-friendly:
+
+* __Consider Highlighting.__ Sometimes Highlighting is enough and there is no real need for filters
+
+  <img src="Highlight State.png" width="500">
+  
+* __Create a sheet listing the options.__ 
+You can create a sheet that serves as a filter/highlighter on a Dashboard. It feels more userfriendly to see all the posible options.
+<img src="List of options.png" width="500">
+
+* __Use icons.__ Similar to the previous option but more user friendly, you can show icons to click on as filters.
+<img src="\static\img\Filter with icon.png" width="500">
+
+![optional caption text](../img/filters1.png)
+
+
+* __Use another graph as a filer.__ You can use a graph that is already in the view to serve as a filter for the rest.
+
+
+* __Hover to filter.__ As an addition to the above, you can make the user hover over to filter, this can be useful when the data set is not too big and so the filter is quick. When it needs some seconds to update I would suggest using the click option
+
+I will cover some of these in my next posts!
+
+To be continued...
+
+
+
+
