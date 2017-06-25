@@ -1,5 +1,5 @@
 ---
-title: "Avoiding or Hiding Tableau filters - Part II"
+title: "Tableau filters - Part II"
 author: "Ainize Cidoncha"
 date: 2017-05-03T21:13:14-05:00
 categories: ["Tableau"]
@@ -8,20 +8,26 @@ tags: ["Tableau", "filters", "icons","visual"]
 
 
 
-<p>Following from the previous post on <a href="https://ainizecm.github.io/blog/2017/05/03/avoiding-or-hiding-tableau-filters---part-i/"><strong>“Avoiding or Hiding Tableau filters - Part I”</strong></a>, let’s get down to the nitty gritty how tos!</p>
+<p>Following from the previous post on <a href="https://ainizecm.github.io/2017/05/tableau-filters---part-i/"><strong>“Tableau filters - Part I”</strong></a>, let’s get down to the nitty gritty how tos!</p>
 <p>We start with a graph and a filter, simple.</p>
 <p>The following graph shows the percentage of people per state that agree with each of the statements. Each state is a bar, the more on the right the bar is the bigger percentage of the population in that specific state agrees with that sentence.</p>
-<p><img src="Filter State.png" width="500"></p>
+<div class="figure">
+<img src="/img/Filter%20State.png" />
+
+</div>
 <p>First, we will create a new sheet listing of the options in the filter, step by step.</p>
 <ol style="list-style-type: decimal">
 <li><p>Bring the Dimension you want to show to rows.</p></li>
 <li><p>On the Marks box choose the Polygon option.</p></li>
 <li><p>Format the sheets setting the borders to None.</p></li>
 </ol>
-<p><img src="filters1.png" width="500"></p>
+<div class="figure">
+<img src="/img/filters1.png" />
+
+</div>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Format the Text as you wish. I like centering and making it grey and bold but that is a personal preference.</p></li>
-<li><p>Add it to the Dashboard and click on the top right of the sheet, where you can see a filter icon. <img src="useasfilter.png" width="500"></p></li>
+<li><p>Add it to the Dashboard and click on the top right of the sheet, where you can see a filter icon. <img src="/img/useasfilter.png" /></p></li>
 </ol>
 <p>So far you will be able to use the sheet as a filter for your other graph by clicking any of the names.</p>
 <p>Do you want to still make it a bit nicer and use icons instead or words?</p>
@@ -29,15 +35,24 @@ tags: ["Tableau", "filters", "icons","visual"]
 <ol start="6" style="list-style-type: decimal">
 <li>Find the icons you want to use and save then on My Tableau Repository/Shapes.(In this case I googled USA states flag icons and download them.)</li>
 </ol>
-<p><img src="tableau repository.png" width="300"></p>
+<div class="figure">
+<img src="/img/tableau%20repository.png" />
+
+</div>
 <ol start="7" style="list-style-type: decimal">
 <li><p>Open the sheet again and change the Marks type to Shape.</p></li>
 <li><p>Drag the Dimension into the Shape box.</p></li>
 <li><p>Click on the Shape box and assign a shape to each name. (Note: If you can not see the shapes you have just added try clicking on Reload Shapes.)</p></li>
 </ol>
-<p><img src="Set shapes.png" width="300"></p>
+<div class="figure">
+<img src="/img/Set%20shapes.png" />
+
+</div>
 <ol start="10" style="list-style-type: decimal">
-<li>Dis-select “Show Header” from the dimension on rows. <img src="show header.png" width="300"></li>
+<li>Dis-select “Show Header” from the dimension on rows. <img src="/img/show%20header.png" /></li>
 </ol>
 <p>We are all done, you can now click on the icon in order to filter your view!</p>
-<p><img src="Filter with icon.png" width="500"></p>
+<div class="figure">
+<img src="/img/Filter%20with%20icon.png" />
+
+</div>

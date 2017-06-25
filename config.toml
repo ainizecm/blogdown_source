@@ -33,8 +33,13 @@ publishDir = "../ainizecm.github.io"
 
 [author]
   name = "Ainize Cidoncha"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
+  bio = """Hi! 
+  Nice to meet you!
+  
+  I am Ainize, Commercial Analyst at [**Global**](http://www.global.com/) during the day and Consultant for [**ISGlobal**](http://www.isglobal.org/) at night.
+  
+  I am passionate about analytics, decision making, data, frameworks and having an impact through numbers.You can reach me on [**linkedin**] (https://www.linkedin.com/in/ainizecidoncha) or at **ainizecm@gmail.com**."""
+  #job = "Your job title"
   #location = "France"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "ainizecm@gmail.com"
@@ -130,7 +135,7 @@ publishDir = "../ainizecm.github.io"
   #    large sidebar is swiped on all lower screens
   # 5: Display header bar on all screens and large sidebar is swiped on large screen
   # 6: Display header bar on all screens and medium sidebar is swiped
-  sidebarBehavior = 6
+  sidebarBehavior = 2
 
   # Your blog cover picture. I STRONGLY recommend you to use a CDN to speed up loading of pages.
   # There is many free CDN like Cloudinary or you can also use indirectly

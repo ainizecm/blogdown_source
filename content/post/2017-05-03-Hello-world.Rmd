@@ -2,7 +2,7 @@
 title: "Hello World"
 author: "Ainize Cidoncha"
 date: 2017-05-02T21:13:14-05:00
-categories: ["R"]
+categories: ["About"]
 tags: ["Hello", "analytics","about"]
 ---
 
