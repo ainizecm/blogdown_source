@@ -18,11 +18,11 @@ Here is how I do sync my R projects with GitHub.
 
 First of all, we need:
 
-- A Github account (You can set it up [**here**] (https://github.com/join?source=header-home))
+- A Github account (You can set it up [**here**](https://github.com/join?source=header-home))
 
-- Install Desktop Github on your computer (You can download it [**here**] (https://desktop.github.com/))
+- Install Desktop Github on your computer (You can download it [**here**](https://desktop.github.com/))
 
-- Generate and activate your computer's SSH key (Check how to do it [**here**] (https://help.github.com/articles/connecting-to-github-with-ssh/))
+- Generate and activate your computer's SSH key (Check how to do it [**here**](https://help.github.com/articles/connecting-to-github-with-ssh/))
 
 - Download [**R**](https://cran.r-project.org/bin/windows/base/) and [**RStudio**](https://www.rstudio.com/products/rstudio/download2/)
 
