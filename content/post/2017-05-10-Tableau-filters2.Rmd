@@ -1,7 +1,9 @@
 ---
 title: "Tableau filters - Part II"
 author: "Ainize Cidoncha"
-date: 2017-05-03T21:13:14-05:00
+thumbnailImagePosition: left
+thumbnailImage: /img/TableauFilters.png
+date: 2017-05-05T21:13:14-05:00
 categories: ["Tableau"]
 tags: ["Tableau", "filters", "icons","visual"]
 ---

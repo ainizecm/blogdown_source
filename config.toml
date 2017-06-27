@@ -33,6 +33,7 @@ publishDir = "../ainizecm.github.io"
 
 [author]
   name = "Ainize Cidoncha"
+  
   bio = """Hi! 
   Nice to meet you!
   
@@ -42,10 +43,10 @@ publishDir = "../ainizecm.github.io"
   #job = "Your job title"
   #location = "France"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "ainizecm@gmail.com"
+  #gravatarEmail = "ainizecm@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  picture = "/img/me.jpg"
   # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "ainize_cidoncha"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -53,31 +54,31 @@ publishDir = "../ainizecm.github.io"
 
 # Menu Configuration
 [[menu.main]]
-  weight = 0
+  weight = 1
   identifier = "home"
   name = "Home"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
   url = "/"
 [[menu.main]]
-  weight = 1
+  weight = 3
   identifier = "categories"
   name = "Categories"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
   url = "/categories"
 [[menu.main]]
-  weight = 2
+  weight = 4
   identifier = "tags"
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
   url = "/tags"
 [[menu.main]]
-  weight = 3
+  weight = 5
   identifier = "archives"
   name = "Archives"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
   url = "/archives"
 [[menu.main]]
-  weight = 4
+  weight = 2
   identifier = "about"
   name = "About"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
@@ -89,12 +90,12 @@ publishDir = "../ainizecm.github.io"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/ainizecm"
-#[[menu.links]]
- # weight = 1
- # identifier = "stackoverflow"
- # name = "Stack Overflow"
-#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-#  url = "https://stackoverflow.com/users/636472/kakawait"
+[[menu.links]]
+  weight = 0
+  identifier = "tableau"
+  name = "Tableau Public"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-plus\"></i>"
+  url = "https://public.tableau.com/profile/ainize#!/"
 
 [[menu.misc]]
   weight = 0
@@ -120,7 +121,7 @@ publishDir = "../ainizecm.github.io"
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  description = "Analytics and INspirational Ideas"
 
   # Customization
   # Define the behavior of the sidebar
@@ -160,7 +161,7 @@ publishDir = "../ainizecm.github.io"
   autoThumbnailImage = true
 
   # Your favicon path, default is "/favicon.png"
-  # favicon = "/favicon.png"
+   favicon = "img/aini.png"
 
   # Header configuration
   # The link at the right of the header is customizable
@@ -184,8 +185,9 @@ publishDir = "../ainizecm.github.io"
     url = "/#about"
 
   # Customize like of athor avatar in sidebar
-  # [params.sidebar.profile]
-  #   url = "/#about"
+   [params.sidebar.profile]
+   picture = "/img/me.jpg"
+     url = "/#about"
 
   # Customize copyright value "© 2016 <CUSTOMIZATION>. All Rights Reserved"
   # [params.footer]

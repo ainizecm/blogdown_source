@@ -1,6 +1,11 @@
 ---
 title: "Hello World"
 author: "Ainize Cidoncha"
+coverImage: /img/me.jpg
+thumbnailImagePosition: "left"
+thumbnailImage: /img/me.jpg
+metaAlignment: center
+coverMeta: out
 date: 2017-05-02T21:13:14-05:00
 categories: ["About"]
 tags: ["Hello", "analytics","about"]

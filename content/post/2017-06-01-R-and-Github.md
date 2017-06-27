@@ -1,5 +1,7 @@
 ---
-title: "R and Github"
+title: "R & Git"
+thumbnailImagePosition: left
+thumbnailImage: /img/GITandR.png
 author: "Ainize Cidoncha"
 date: 2017-06-03T21:13:14-05:00
 categories: ["R"]
