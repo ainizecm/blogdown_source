@@ -161,7 +161,7 @@ publishDir = "../ainizecm.github.io"
   autoThumbnailImage = true
 
   # Your favicon path, default is "/favicon.png"
-   favicon = "img/aini.png"
+   favicon = "img/LOGO.png"
 
   # Header configuration
   # The link at the right of the header is customizable
