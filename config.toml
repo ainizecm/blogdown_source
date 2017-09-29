@@ -184,7 +184,7 @@ publishDir = "../ainizecm.github.io"
     icon = ""
     url = "/#about"
 
-  # Customize like of athor avatar in sidebar
+  # Customize link of athor avatar in sidebar
    [params.sidebar.profile]
    picture = "/img/me.jpg"
      url = "/#about"
