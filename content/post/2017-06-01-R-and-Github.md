@@ -1,7 +1,7 @@
 ---
 title: "R & Git"
 thumbnailImagePosition: left
-thumbnailImage: //photos.google.com/album/AF1QipOpCndAbmBQ7Vgt6y7CMtsn0YwfbmVJVuH2TqOY/photo/AF1QipOg20rWjACE4ZIVRwVWZUMlOy2VUYCqDoxVwiHP
+thumbnailImage: /img/GITandR.png
 author: "Ainize Cidoncha"
 date: 2017-06-03T21:13:14-05:00
 categories: ["R"]
