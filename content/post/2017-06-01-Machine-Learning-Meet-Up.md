@@ -11,7 +11,7 @@ tags: ["machine learning", "data science","meet-up"]
 
 
 
-Yesterday I attended for the first time to the [**Machine Learning Fireside Chats**](https://www.meetup.com/Machine-learning-Fireside-Talks/events/243484056/) meetup run by the BBC Blue Room. Even though it was quite far from work and home I could not help going after seeing the name of the speakers on the line up.
+Yesterday I attended for the first time the [**Machine Learning Fireside Chats**](https://www.meetup.com/Machine-learning-Fireside-Talks/events/243484056/) meetup run by the BBC Blue Room. Even though it was quite far from work and home I could not help going after seeing the name of the speakers on the line up.
 
  <!--more-->
 Simon Raper (Founder of Coppelia Machine Learning and Analytics), Giles Pavey (Head of Data Strategy at the Department for Work and Pensions) and Dr. Shahzia Holtom (Lead Data Scientist at Pivotal Labs) got together yesterday to discuss about what it is important when getting started with a Machine Learning project.
