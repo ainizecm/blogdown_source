@@ -15,7 +15,7 @@
 baseurl = "https://ainizecm.github.io/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "AInI"
+title = "AInI     /    Analytics and INspirational Ideas"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "https-ainizecm-github-io"
 googleAnalytics = "UA-100341328-2"
@@ -32,58 +32,76 @@ publishDir = "../ainizecm.github.io"
   archive = "archives"
 
 [author]
-  name = "Ainize Cidoncha"
+  name =""
   
-  bio = """Hi! 
-  Nice to meet you!
+  bio = """
+  **A**nalytics and **In**spirational **I**deas 
+"""
   
-  I am Ainize, Commercial Analyst at [**Global**](http://www.global.com/) during the day and Consultant for [**ISGlobal**](http://www.isglobal.org/) at night.
-  
-  I am passionate about analytics, decision making, data, frameworks and having an impact through numbers.You can reach me on [**linkedin**] (https://www.linkedin.com/in/ainizecidoncha) or at **ainizecm@gmail.com**."""
-  #job = "Your job title"
-  #location = "France"
+  job = "Data Visualization, Analytics and Science"
+  location = "Bilbao-London"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   #gravatarEmail = "ainizecm@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "/img/me.jpg"
+  picture = "img/LOGO2.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "ainize_cidoncha"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
 
 # Menu Configuration
+#[[menu.main]]
+ # weight = 1
+  #identifier = "home"
+  #name = "Home"
+  #pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
+  #url = "/"
+  
+  # Menu Configuration
 [[menu.main]]
   weight = 1
-  identifier = "home"
-  name = "Home"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
+  identifier = "blog"
+  name = "Blog"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-file-text-o\"></i>"
   url = "/"
+  
 [[menu.main]]
   weight = 3
-  identifier = "categories"
-  name = "Categories"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
-  url = "/categories"
+  identifier = "projects"
+ name = "Projects"
+ pre = "<i class=\"sidebar-button-icon fa fa-lg fa-flask\"></i>"
+ url = "/Projects"
+  
 [[menu.main]]
-  weight = 4
+  weight = 5
   identifier = "tags"
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
   url = "/tags"
+  
+#[[menu.main]]
+ # weight = 6
+ # identifier = "talks"
+  #name = "Talks"
+  #pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
+  #url = "/talks"
+  
 [[menu.main]]
-  weight = 5
+  weight = 6
   identifier = "archives"
   name = "Archives"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
   url = "/archives"
 [[menu.main]]
-  weight = 2
+  weight = 7
   identifier = "about"
   name = "About"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
-  url = "/#about"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-user\"></i>"
+  url = "/about"
 
+
+  
 [[menu.links]]
   weight = 0
   identifier = "github"
@@ -115,7 +133,7 @@ publishDir = "../ainizecm.github.io"
   # keywords = ["development", "next-gen"]
 
   # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
-  clearReading = true
+  clearReading = false
 
   # Define categories will create hierarchy between parents: `categories = ["foo", "bar"]` will consider "bar" a sub-category of "foo". 
   # If false it will flat categories.
@@ -144,7 +162,7 @@ publishDir = "../ainizecm.github.io"
   # Current image is on AWS S3 and delivered by AWS CloudFront.
   # Otherwise put your image in folder `static/_images/` (development)  or in `source/assets/images/` if you can't or don't want to build the theme,
   # and use relative url : `your-image.png`
-  coverImage = "cover.jpg"
+  coverImage = "dandelion-plasma-main.jpg"
 
   # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
   imageGallery = true
@@ -161,15 +179,16 @@ publishDir = "../ainizecm.github.io"
   autoThumbnailImage = false
 
   # Your favicon path, default is "/favicon.png"
-   favicon = "img/LOGO.png"
+   favicon = "img/LOGO2.png"
 
   # Header configuration
   # The link at the right of the header is customizable
   # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
   # By default, author's gravatar or author's picture is displayed.
-  #     url: /#search
-  #     icon: search
-  #     class: st-search-show-outputs
+    #url: /#search
+    # icon: search
+     #class: st-search-show-outputs
+
 
   # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
   # they have to be referred from static root. Example
