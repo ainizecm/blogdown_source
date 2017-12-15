@@ -101,21 +101,21 @@ FILTER('Online Retail','Online Retail'[InvoiceDate]<=[EndDate_Q1]),ALLEXCEPT('On
 
 
 
-Using the last booking date measures created let's compute the recency of a client, i.e., the days since its last purchase.
+# Using the last booking date measures created let's compute the recency of a client, i.e., the days since its last purchase.
 
-```
-Recency_Q4 = DATEDIFF([Last Booking date_Q4],MAX('Online Retail'[EndDate_Q4]),DAY)
-```
-```
-Recency_Q3 = DATEDIFF([Last Booking date_Q4],MAX('Online Retail'[EndDate_Q3]),DAY)
-```
-```
-Recency_Q2 = DATEDIFF([Last Booking date_Q4],MAX('Online Retail'[EndDate_Q2]),DAY)
-```
-```
-Recency_Q1 = DATEDIFF([Last Booking date_Q4],MAX('Online Retail'[EndDate_Q1]),DAY)
-```
-
+# ```
+# Recency_Q4 = DATEDIFF([Last Booking date_Q4],MAX('Online Retail'[EndDate_Q4]),DAY)
+# ```
+# ```
+# Recency_Q3 = DATEDIFF([Last Booking date_Q4],MAX('Online Retail'[EndDate_Q3]),DAY)
+# ```
+# ```
+# Recency_Q2 = DATEDIFF([Last Booking date_Q4],MAX('Online Retail'[EndDate_Q2]),DAY)
+# ```
+# ```
+# Recency_Q1 = DATEDIFF([Last Booking date_Q4],MAX('Online Retail'[EndDate_Q1]),DAY)
+# ```
+# 
 
 
 The last measure we want to compute is the total spend of the client during each of the periods.
@@ -148,14 +148,11 @@ Quick Churn:
 We can define our Status Segments for each of the periods using the following formula:
 
 ``` 
-Status_Q4 = 
-CALCULATE(
- IF([Recency_Q4]>180,"Churn",
- IF(AND([Recency_Q4]>90,[First Booking Date]>MAX('Online Retail'[EndDate_Q3])),
-                                                                    "Quick Warm",
- IF([First Booking Date]>MAX('Online Retail'[EndDate_Q3]),"New",
- IF([Recency_Q4]>90,"Warm","Active" )))),
- ALLEXCEPT('Online Retail','Online Retail'[CustomerID]))
+Status_Q4 = CALCULATE(IF([Last Booking date_Q4]<=MAX('Online Retail'[EndDate_Q2]),"Churn",
+                           IF(AND([Last Booking date_Q4]<=MAX('Online Retail'[EndDate_Q3]),[First Booking Date]>MAX('Online Retail'[EndDate_Q2])), "Quick Warm",
+                               IF(AND([First Booking Date]>MAX('Online Retail'[EndDate_Q3]),[First Booking Date]<=MAX('Online Retail'[EndDate_Q4])),"New",
+						           IF([Last Booking date_Q3]<=MAX('Online Retail'[EndDate_Q2]),"Warm","Active" )))),
+                                    ALLEXCEPT('Online Retail','Online Retail'[CustomerID]))
   ```
 We will only create Status for the 3 more recent quarters because we do not have enough data to define the clients of the first quarter.
 
@@ -177,51 +174,46 @@ Then we can use the % of Customers measure for our high or low spenders measure
 
 ```
 HighorLow_Q4 = 
-	IF(
-		CALCULATE([% Customers],FILTER('Online Retail','Online Retail'[InvoiceDate]>'Online Retail'[EndDate_Q2])), "High Value","Low Value"
-		)
+	IF(ISBLANK([Revenue_Q4]),BLANK(),
+		IF(CALCULATE( [% Customers],FILTER(ALLEXCEPT('Online Retail','Online Retail'[CustomerID]),'Online Retail'[InvoiceDate]>'Online Retail'[EndDate_Q3]))<0.2, "High Value","Low Value"
+		))
 ```
 
 ```
 HighorLow_Q3 = 
-	IF(
-		CALCULATE([% Customers],FILTER('Online Retail',
-			AND('Online Retail'[InvoiceDate]>'Online Retail'[EndDate_Q2],'Online Retail'[InvoiceDate]<='Online Retail'[EndDate_Q3]))),
-			 "High Value","Low Value"
-		)
+	IF(ISBLANK([Revenue_Q3]),BLANK(),
+		IF(CALCULATE( [% Customers],FILTER(ALLEXCEPT('Online Retail','Online Retail'[CustomerID]),
+			AND('Online Retail'[InvoiceDate]>'Online Retail'[EndDate_Q2],
+				'Online Retail'[InvoiceDate]<='Online Retail'[EndDate_Q3])
+			))<0.2, "High Value","Low Value"
+		))
 	```
 
 
 ```
 HighorLow_Q2 = 
-	IF(
-		CALCULATE([% Customers],FILTER('Online Retail',
-			AND('Online Retail'[InvoiceDate]>'Online Retail'[EndDate_Q1],'Online Retail'[InvoiceDate]<='Online Retail'[EndDate_Q2]))),
-			 "High Value","Low Value"
-		)
+	IF(ISBLANK([Revenue_Q3]),BLANK(),
+		IF(CALCULATE( [% Customers],FILTER(ALLEXCEPT('Online Retail','Online Retail'[CustomerID]),
+			AND('Online Retail'[InvoiceDate]>'Online Retail'[EndDate_Q1],
+				'Online Retail'[InvoiceDate]<='Online Retail'[EndDate_Q2])
+			))<0.2, "High Value","Low Value"
+		))
 		```
 		
-		```
-		HighorLow_Q1 = 
-	IF(
-		CALCULATE([% Customers],FILTER('Online Retail',
-			'Online Retail'[InvoiceDate]<='Online Retail'[EndDate_Q1])),
-			 "High Value","Low Value"
-		)
-		```
+
 		
 
 Finally we are ready to define the segments for each of the periods
 ```
-Segment_Q4 = CONCATENATE([Status_Q4],[HighorLow_Q4])
+Segment_Q4 = [Status_Q4]& " " &[HighorLow_Q4]
 ```
 
 ```
-Segment_Q3 = CONCATENATE([Status_Q3],[HighorLow_Q3])
+Segment_Q3 =  [Status_Q3]& " " &[HighorLow_Q3]
 ```
 
 ```
-Segment_Q2 = CONCATENATE([Status_Q2],[HighorLow_Q2
+Segment_Q2 =  [Status_Q2]& " " &[HighorLow_Q2]
 ])
 ```
 
@@ -232,7 +224,7 @@ In order to be able to create graphs easily, we will create a simple table with 
 ```
 Customer Segments = ADDCOLUMNS(SUMMARIZE('Online Retail','Online Retail'[CustomerID]),
                        "First Booking",[First Booking Date],
-                       "Revenue_Q4",[Revenue_Q1],
+                       "Revenue_Q4",[Revenue_Q4],
                        "Status_Q4",[Status_Q4],
                        "HighorLow_Q4",[HighorLow_Q4],
                         "Sement_Q4",[Segment_Q4],
@@ -244,4 +236,13 @@ Customer Segments = ADDCOLUMNS(SUMMARIZE('Online Retail','Online Retail'[Custome
                        "Status_Q2",[Status_Q2],
                        "HighorLow_Q2",[HighorLow_Q2],
                         "Sement_Q2",[Segment_Q2])
+                        
 ```
+
+
+**STEP 5. Visuals**
+
+Once the new table is up and running we can create visuals and analyze our segments. 
+
+For instance we can use a Sankey chart to show the 
+
