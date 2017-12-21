@@ -148,7 +148,17 @@ Quick Churn:
 We can define our Status Segments for each of the periods using the following formula:
 
 ``` 
-Status_Q4 = CALCULATE(IF([Last Booking date_Q4]<=MAX('Online Retail'[EndDate_Q2]),"Churn",
+Status_Q4 = CALCULATE(IF([First Booking Date]>MAX('Online Retail'[EndDate_Q4]),BLANK(),
+							IF([Last Booking date_Q4]<=MAX('Online Retail'[EndDate_Q2]),"Churn",
+                           IF(AND([Last Booking date_Q4]<=MAX('Online Retail'[EndDate_Q3]),[First Booking Date]>MAX('Online Retail'[EndDate_Q2])), "Quick Warm",
+                               IF(AND([First Booking Date]>MAX('Online Retail'[EndDate_Q3]),[First Booking Date]<=MAX('Online Retail'[EndDate_Q4])),"New",
+						           IF([Last Booking date_Q4]<=MAX('Online Retail'[EndDate_Q3]),"Warm","Active" ))))),
+                                    ALLEXCEPT('Online Retail','Online Retail'[CustomerID]))
+
+
+```
+```
+Status_Q4 = CALCULATE(IF([Last Booking date_Q4]<=MAX('Online Retail'[EndDate_Q4]),"Churn",
                            IF(AND([Last Booking date_Q4]<=MAX('Online Retail'[EndDate_Q3]),[First Booking Date]>MAX('Online Retail'[EndDate_Q2])), "Quick Warm",
                                IF(AND([First Booking Date]>MAX('Online Retail'[EndDate_Q3]),[First Booking Date]<=MAX('Online Retail'[EndDate_Q4])),"New",
 						           IF([Last Booking date_Q3]<=MAX('Online Retail'[EndDate_Q2]),"Warm","Active" )))),
