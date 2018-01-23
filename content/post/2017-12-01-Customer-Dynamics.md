@@ -6,7 +6,7 @@ author: "Ainize Cidoncha"
 date: 2017-12-02T21:13:14-05:00
 categories: ["Analytics","PowerBI","Segmentation"]
 
-tags: ["Analytics","PowerBI","Segmentation","Churn"]
+tags: ["Analytics","PowerBI","Segmentation","Churn","R"]
 
 draft: true
 ---
@@ -254,5 +254,11 @@ Customer Segments = ADDCOLUMNS(SUMMARIZE('Online Retail','Online Retail'[Custome
 
 Once the new table is up and running we can create visuals and analyze our segments. 
 
-For instance we can use a Sankey chart to show the 
+1. Show the distribution of our data set.
+
+2. See from which clients was revenue comming from
+
+3. See in a matrix or a sanky diagram the movemnt between segemtns
+
+
 
